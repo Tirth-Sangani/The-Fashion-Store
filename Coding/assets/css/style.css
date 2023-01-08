@@ -1,0 +1,969 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Oleo+Script:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root {
+    --white: #fff;
+    --bs-primary-color: #414151;
+    --bs-secondary-color: #0081CF;
+    --bs-paragraph-color: #808080;
+    --bs-black-color: #252525;
+    --poppins: 'Poppins', sans-serif;
+    --roboto: 'Roboto', sans-serif;
+    --Leifa-Regular: 'Leifa-Regular';
+    --Leifa-Medium: 'Leifa-Medium';
+    --Leifa-Bold: 'Leifa-Bold';
+    --Leifa-ExtraBold: 'Leifa-ExtraBold';
+}
+
+button , span , input , textarea , a {
+    font-family: var(--roboto);
+}
+
+.border-gray{
+    border: var(--bs-paragraph-color) solid 1px !important;
+}
+
+.btn-6{
+    padding: 7px 20px;
+    border-radius: 8px;
+    background-color: var(--white);
+    color: var(--bs-black-color);
+    border: none;
+    font-weight: 600;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+p {
+    color: var(--bs-paragraph-color);
+    font-family: var(--roboto);
+}
+
+@font-face {
+    font-family: "Leifa-Regular";
+    src: url(../font/Leifa/Leifa-Regular.otf);
+}
+@font-face {
+    font-family: "Leifa-Medium";
+    src: url(../font/Leifa/Leifa-Medium.otf);
+}
+@font-face {
+    font-family: "Leifa-Bold";
+    src: url(../font/Leifa/Leifa-Bold.otf);
+}
+@font-face {
+    font-family: "Leifa-ExtraBold";
+    src: url(../font/Leifa/Leifa-ExtraBold.otf);
+}
+
+h1,
+h2{
+    font-family: var(--Leifa-Bold) !important;
+}
+
+
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--poppins);
+}
+
+.owl-theme .owl-nav {
+    display: none;
+}
+
+.owl-theme .owl-dots {
+    display: none;
+}
+
+h2 {
+    color: var(--bs-primary-color);
+}
+
+
+/* header */
+
+header {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+body {
+    padding-top: 86px !important;
+}
+header .navbar-nav .nav-item .dropdown-menu .active{
+    color: var(--white) !important;
+}
+header .navbar-nav .nav-item .active {
+    color: var(--bs-secondary-color) !important;
+    font-size: 16px !important;
+}
+header .navbar-nav .nav-item .nav-link {
+    color: var(--bs-primary-color);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 10px;
+}
+header .nav-item .nav-link:hover{
+    color: var(--bs-secondary-color);
+}
+header .nav-item .nav-link{
+   transition: all 0.5s;
+}
+header .login-btn:hover{
+    color: var(--bs-secondary-color);
+}
+header .login-btn{
+    color: var(--bs-black-color);
+    transition: all 0.5s;
+}
+header .header-social-icon i {
+    color: var(--bs-primary-color);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+header .header-social-icon i:hover {
+    color: var(--bs-secondary-color);
+}
+header .dropdown-menu{
+    margin-top: 31px !important;
+}
+header .sign-up-btn{
+    margin-left: 10px;
+}
+header ul li a{
+    font-family: var(--Leifa-Bold);
+}
+
+/* landing-page */
+
+.landing-page {
+    /* background: url(../images/video.mp4); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.video {
+    right: 0;
+    bottom: 0;
+}
+
+.landing-bg-img-right {
+    right: 0px;
+    top: 0;
+    z-index: -11;
+    width: 700px;
+}
+
+.landing-bg-img-left {
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 700px;
+}
+
+.btn{
+    padding: 16px 48px;
+    background: none;
+    border: 1px solid var(--bs-secondary-color) !important;
+    color: var(--bs-secondary-color) !important;
+    font-size: 20px;    
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 120%;
+    background-color: rgba(255, 255, 255, 0.4);
+    top: 50%;
+    transform:skewX(30deg) translate(-150%, -50%);
+    transition: all 0.5s;
+}
+.btn:hover{
+    background-color: var(--bs-secondary-color) !important;
+    color: #fff !important;
+    border: 1px solid var(--bs-secondary-color);
+}
+.btn:hover::before{
+    transform: skewX(30deg) translate(150%, -50%);
+    transition-delay:0.1s ;
+}
+.login-btn{
+    background: none !important;
+    color: var(--bs-primary-color) !important;
+    font-family: var(--Leifa-Bold);
+    padding-right: 10px;
+}
+.login-btn:hover{
+    color: var(--bs-secondary-color) !important;
+}
+.sign-up-btn{
+    color: var(--bs-primary-color) !important;
+    border: 1px solid var(--bs-primary-color) !important;
+    font-family: var(--Leifa-Bold) !important;
+}
+.sign-up-btn:hover{
+    border: 1px solid var(--bs-secondary-color) !important;
+}
+
+
+h1 {
+    font-size: 48px !important;
+    font-weight: 600 !important;
+    color: var(--bs-primary-color);
+    font-family: var(--poppins);
+}
+
+.landing-page p {
+    font-size: 18px !important;
+    color: var(--bs-primary-color);
+    font-family: var(--roboto);
+}
+
+.landing-page img {
+    width: 450px !important;
+    z-index: -11;
+}
+
+.owl-carousel .owl-item img {
+    display: inline !important;
+}
+
+.landing-page .owl-theme .owl-nav,
+.landing-page .owl-theme .owl-dots {
+    display: none;
+}
+
+/* new-collection-section */
+
+.new-collection-section h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--bs-primary-color);
+}
+
+.new-collection-section p {
+    width: 70%;
+}
+
+.new-collection-section .card img {
+    border-radius: 10px;
+}
+
+.new-collection-section .card h5 {
+    font-size: 20px;
+}
+
+.new-collection-section .card p {
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.new-collection-section .card span {
+    font-size: 19px;
+    font-family: var(--poppins);
+}
+
+.collection-star-icon i {
+    color: #ffd500;
+    padding: 0 1px;
+    font-size: 14px;
+}
+
+.new-collection-section .view-all-btn {
+    color: var(--bs-secondary-color);
+    font-weight: 600;
+}
+
+/* our-service-section */
+
+
+.our-service-section h2 {
+    font-size: 48px;
+    font-family: var(--Leifa-Regular) !important;
+}
+
+.our-service-section span {
+    font-weight: 700;
+    font-family: var(--Leifa-ExtraBold);
+}
+
+.our-service-section .border-left {
+    border-left: 3px solid #898989;
+    height: 150px;
+}
+
+.our-service-section p {
+    width: 280px;
+}
+
+/* product-display */
+
+a {
+    text-decoration: none !important;
+}
+
+.product-display .btn-2 {
+    background-color: var(--white) !important;
+    font-size: 18px;
+    border: 1px solid #fff !important;
+}
+
+.product-display a {
+    color: var(--bs-primary-color) !important;
+}
+
+.product-display .card .main{
+    position: relative !important;
+}
+
+.product-display .card img{
+    transition: all 0.5s;
+    cursor: pointer;
+    display: block;
+    width: 100% !important;
+    transform: scale(1.02);
+}
+
+.product-display .card:hover img{
+    transform: scale(1.1);
+}
+
+.product-display .card:hover .content{
+    top: 0;
+}
+
+.product-display .card .content{
+    position: absolute !important;
+    cursor: pointer;
+    padding: 40px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(rgba(255, 255, 255, 0.6),#84C7E1);
+    transition: all 0.5s;
+}
+
+.product-display .content-2{
+    background: linear-gradient(rgba(255, 255, 255, 0.6),#FFB499) !important;
+}
+
+.product-display .btn-3 {
+    color: var(--bs-primary-color) !important;
+    background: #FFE4DA !important;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #FFE4DA !important;
+}
+
+.product-display .top {
+    top: 63% !important;
+}
+
+/* slider-section-1 */
+
+.slider-section-1 {
+    margin-top: 70px;
+    background-color: #F3F2F8;
+}
+
+.slider-section-1 .card {
+    background-color: transparent;
+}
+
+.slider-section-1 .btn {
+    width: 100%;
+    border-radius: 0 !important;
+}
+
+/* latest-section */
+
+
+.latest-section .border-left::before {
+    border-left: 3px solid #b7b7b7;
+    position: absolute;
+    content: '';
+    height: 90px;
+    border-radius: 10px;
+}
+
+.latest-section h2{
+    font-size: 36px;
+}
+
+.latest-section .btn-4 {
+    background-color: #000 !important;
+    position: relative;
+    top: 593px;
+    border-radius: 0 0 0 20px !important;
+    border: none !important;
+    color: var(--white) !important;
+}
+
+/* trending */
+
+.trending-section {
+    background: rgb(132, 199, 255, 0.3);
+}
+
+.trending-section p {
+    color: #5d5d5d;
+}
+
+.trending-section h2{
+    font-size: 36px;
+}
+
+/* testimonial-section */
+
+.testimonial-section h2{
+    font-size: 36px;
+}
+
+.testimonial-section img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.testimonial-section .border {
+    border-bottom: 3px solid rgb(91, 91, 91);
+    border-radius: 5px;
+    background-color: rgb(91, 91, 91, 0.5);
+}
+
+                                                  /* Contact Page */
+
+/* visit our store section */
+
+.store{
+    background-image: url(../images/Tirth/Mask\ group.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.store .store_img .address{
+    background-color: white;
+    top: -100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.store .store_img .address h3{
+    font-family: var(--Leifa-Bold);
+    color: var(--bs-primary-color);
+}
+
+.store .store_img .address p{
+    font-family: var(--poppins);
+}
+
+/* form section */
+
+.Contact_Form{
+    background-image: url(../images/Tirth/Background\ Elements.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.Contact_Form .form .input{
+    height: 50px;
+}
+
+.Contact_Form .label{
+    padding: 10px 10px !important;
+    color: var(--bs-paragraph-color) !important;
+}
+
+.Contact_Form .content .letter-space{
+    letter-spacing: 5px;
+    color: var(--bs-primary-color);
+}
+
+.Contact_Form .content h3{
+    color: var(--bs-primary-color);
+    font-family: var(--Leifa-Bold);
+}
+
+.Contact_Form .content h2{
+    font-size: 36px;
+}
+
+
+.Contact_Form textarea{
+    height: 170px !important;
+}
+
+.Contact_Form .icon {
+    width: 30px;
+    height: 30px;
+    background-color: var(--bs-secondary-color);
+    border-radius: 100%;
+    border: none;
+}
+
+.Contact_Form .icon i{
+    color: white;
+}
+
+/* Newsletter */
+
+.newsletter h2{
+    color: var(--bs-primary-color);
+    text-align: left !important;
+}
+
+.newsletter{
+    background-image: url(../images/Tirth/newsletter-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.newsletter .input-group{
+    height: 60px !important;
+}
+
+.newsletter span{
+    letter-spacing: 0;
+    font-family: var(--poppins);
+    background-color: var(--bs-secondary-color);
+    cursor: pointer;
+}
+
+.newsletter input{
+    padding: 10px 20px;
+    font-family: var(--poppins);
+    box-shadow: 0 1px 20px rgba(216, 216, 216, 0.1) !important;
+}
+
+                                                  /* About Page */
+
+/* blog */
+
+.blog{
+    background-image: url(../images/Tirth/bg-blue.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* story */
+
+.story h2{
+    color: var(--bs-primary-color);
+    font-size: 36px;
+}
+
+.story h4{
+    color: var(--bs-black-color);
+}
+
+/* album */
+
+.album{
+    background-image: url(../images/Tirth/Background\ Elements.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.album h3{
+    letter-spacing: 3px;
+    color: var(--bs-primary-color);
+}
+
+.album span{
+    letter-spacing: 0;
+    color: var(--bs-black-color);
+}
+
+.album p{
+    text-align: justify !important;
+}
+
+/* footer */
+
+footer{
+    background-image: url(../images/Tirth/Background\ Elements.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+footer h3{
+    color: var(--bs-primary-color);
+    font-family: var(--Leifa-Bold);
+}
+
+footer .first p{
+    line-height: 30px;
+}
+
+footer a{
+    color: var(--bs-paragraph-color);
+    font-weight: 400;
+}
+
+footer .icon {
+    width: 30px;
+    height: 30px;
+    background-color: var(--bs-secondary-color);
+    border-radius: 100%;
+    border: none;
+}
+
+footer .last{
+    border-top: 2px solid rgb(190, 190, 190);
+}
+
+footer .icon i{
+    color: white;
+}
+
+                                                  /* service Page */
+
+/* help section */
+
+.help{
+    background-image: url(../images/Tirth/Mask\ group.jpg);
+    background-size: cover;
+    background-position: center;
+}                                                
+
+.help h2{
+    color: var(--bs-primary-color);
+    font-size: 36px;
+}
+
+.help .head{
+    text-align: justify;
+    font-weight: 500;
+}
+
+/* trusted section */
+
+.trusted{
+    background-image: url(../images/Tirth/ffj.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.trusted h2{
+    font-size: 36px;
+}
+
+                                                  /* winter Page */
+
+/* winter_wear section */
+
+.winter_wear{
+    background-image: url(../images/Tirth/Mask\ group-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.winter_wear .content .icon i{
+    color: var(--bs-secondary-color);
+    line-height: 45px;
+}
+
+.winter_wear .content .icon{
+    background-color: #D6ECF5;
+    width: 45px;
+    height: 45px;
+}
+
+.winter_wear .content a{
+    color: var(--bs-secondary-color);
+}
+
+.winter_wear h3{
+    font-family: var(--Leifa-Bold);
+    color: var(--bs-primary-color);
+}
+
+/* sale section */
+
+.sale h2{
+    color: var(--bs-primary-color);
+}
+
+.sale h4{
+    color: #2881A4;
+}
+button{
+    border: none;
+}
+.btn-4{
+    color: var(--bs-secondary-color);
+    font-weight: 400;
+    transition: all 0.5s;
+    border: 1px solid #0081CF;
+}
+
+.btn-4:hover{
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    background-color: #0081CF;
+    color: #fff;
+}
+
+.btn-5{
+    color: var(--bs-black-color);
+    background-color: transparent;
+    padding: 6px 10px;
+    border-radius: 7px;
+    transition: all 0.5s;
+    font-family: var(--poppins);
+    border: var(--bs-black-color) 1px solid;
+}
+
+.btn-5:hover{
+    background-color: var(--white);
+}
+
+/* our collection */
+
+.our_collection h3{
+    font-family: var(--Leifa-Bold);
+    color: var(--bs-primary-color);
+}
+
+.our_collection{
+    background-image: url(../images/Tirth/Mask\ group.jpg);
+}
+
+.our_collection .image{
+    position: relative;
+}
+
+.our_collection button{
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+}
+
+                                                  /* offer Page */
+        
+/* Throwback Thursday section */
+
+.throwback h2{
+    font-size: 36px;
+}
+
+/* special offer section */
+
+.special_offer .box .row .image{
+    position: relative;
+}
+
+.special_offer h2{
+    font-size: 36px;
+}
+
+.special_offer button{
+    position: absolute;
+    bottom: 15px;
+    left: 27px;
+    padding: 5px 10px;
+}
+
+
+
+                                                  /* size-chart Page */
+
+/* breadcrumb section */
+
+.breadcrumbs{
+    background-image: url(../images/Tirth/sssd.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.breadcrumbs h2{
+    font-size: 36px;
+}
+
+/* chart section */
+
+.chart .nav-pills button{
+    color: var(--bs-black-color);
+    font-family: var(--poppins);
+    font-weight: 500;
+    background-color: white !important;
+    padding-bottom: 20px !important;
+    transition: all 0.5s;
+    border-bottom: 5px solid white;
+}
+
+.chart .nav-pills button:focus{
+    color: var(--bs-black-color);
+    background-color: white !important;
+    border-radius: 0;
+    border-bottom: 5px solid var(--bs-black-color);
+}
+
+.chart .nav-pills{
+    position: relative;
+}
+
+.chart .nav-pills::before{
+    content: "";
+    background-color: var(--bs-paragraph-color);
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    position: absolute;
+}
+
+.chart .nav-pills .nav-link.active{
+    color: var(--bs-black-color) !important; 
+}
+
+.chart .Measure .content .number{
+    width: 25px;
+    height: 25px;
+    background-color: #363636;
+    border-radius: 100%;
+}
+
+.chart .Measure .content .number span{
+    line-height: 25px;
+}
+
+.chart .Measure h2{
+    font-family: var(--Leifa-ExtraBold);
+    color: var(--bs-primary-color);
+    font-size: 36px;
+}
+.modal-dialog{
+    z-index: 1111;
+}
+
+.top {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    width: 50px;
+    height: 50px;
+    /* background-color: var(--bs-secondary-color); */
+    background: linear-gradient(#84C7E1,#FFB499);
+    color: white !important;
+    border: none !important;
+    font-size: 22px;
+    border-radius: 70% !important;
+    display: none;
+    cursor: pointer;
+    z-index: 99999;
+  }
+
+
+
+
+
+
+
+
+
+    
+@media (max-width:767px) {
+    
+    .store .store_img .address{
+        background-color: white;
+        position: static !important;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    .newsletter input{
+        height: 60px !important;
+    }
+
+    .blog p{
+        text-align: center;
+    }
+
+    .help p , h2{
+        text-align: center !important;
+    }
+
+    .help h2{
+        font-size: 24px;
+    }
+
+    .trending-section p{
+        text-align: center;
+    }
+
+    .latest-section h2{
+        font-size: 24px !important;
+    }
+
+    .trending-section h2{
+        font-size: 24px !important;
+    }
+
+    .testimonial-section h2{
+        font-size: 24px;
+    }
+
+    .trusted h2{
+        font-size: 24px;
+    }
+
+    .story h2{
+        font-size: 24px;
+    }
+
+    .Contact_Form .content h2{
+        font-size: 24px;
+    }
+
+    .throwback h2{
+        font-size: 24px;
+    }
+
+    .special_offer h2{
+        font-size: 24px;
+    }
+
+    .breadcrumbs h2{
+        font-size: 24px;
+    }
+
+    .chart .Measure h2{
+        font-size: 24px;
+    }
+    
+}
